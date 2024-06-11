@@ -69,6 +69,12 @@ static void MX_ADC1_Init(void);
 uint32_t sine_val[NUM_OF_SAMPLES];
 uint32_t adc_read;
 
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+// do something cool
+}
+
+
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* adc_address){
 	static int number_of_interrupts = 0;
 	if(adc_address == &hadc1){
